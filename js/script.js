@@ -8,14 +8,16 @@
 /**
  * This function calculates area of a triangle.
  */
-function calculate () {
-  // input
-  let base = parseInt(document.getElementById('base-of-triangle').value);
-  let height = parseInt(document.getElementById('height-of-triangle').value);
+function calculateArea() {
+      const a = parseFloat(document.getElementById('a').value);
+      const b = parseFloat(document.getElementById('b').value);
+      const h = parseFloat(document.getElementById('h').value);
 
-  // process
-  let area = base * height / 2;
+      if (isNaN(a) || isNaN(b) || isNaN(h)) {
+        document.getElementById('result').textContent = "Please enter valid numbers for all dimensions.";
+        return;
+      }
 
-  // output
-  document.getElementById('area').innerHTML = 'Area is: ' + area + ' cm²'
-}
+      const area = ((a + b) * h) / 2;
+      document.getElementById('result').textContent = `Area: ${area.toFixed(2)} cm²`;
+    }

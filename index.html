@@ -1,85 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Area, with JavaScript" />
-    <meta name="keywords" content="Immaculata, ICD2O" />
-    <meta name="author" content="Isaaq Simon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io (5)/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io (5)/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io (5)/favicon-16x16.png" />
-    <link rel="manifest" href="./favicon_io (5)/site.webmanifest" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-lime.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Area of a triangle, with JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Area of a Trapezoid, with JavaScript">
+    <meta name="keywords" content="Immaculata, ICD2O">
+    <meta name="author" content="Isaaq Simon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Trapezoid Area Calculator</title>
   </head>
   <body>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Area, with JS</span>
-        </div>
-      </header>
-      <main class="mdl-layout__content">
-        <table>
-          <tr>
-            <th>
-              <img src="./images/triangle.png" alt="triangle" width="75%" height="auto"/>
-            </th>
-            <th>
-              <h2>Formula</h2>
-              <h3>A = 1/2 × b × h.</h3>
-            </th>
-          </tr>
-        </table>
-        <!-- Simple Textfield -->
-        <form action="#">
-          <p>Base</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="base-of-triangle"
-            />
-            <label class="mdl-textfield__label" for="base-of-triangle">base ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-				
-        <!-- Numeric Textfield -->
-        <form action="#">
-          <p>Height</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="height-of-triangle"
-            />
-            <label class="mdl-textfield__label" for="height-of-triangle">height ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-				
-        <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculate()"
-        >
-          Calculate
-        </button>
-        <br />
-        <p>
-          <div id="answers">
-            <div id="area"></div>
-          </div>
-        </p>
-      </main>
-    </div>
+    <h1>Trapezoid Area Calculator</h1>
+    <label for="a">Base a (cm):</label>
+    <input type="number" id="a" step="any" required>
+    <label for="b">Base b (cm):</label>
+    <input type="number" id="b" step="any" required>
+    <label for="h">Height h (cm):</label>
+    <input type="number" id="h" step="any" required>
+    <button onclick="calculateArea()">Calculate Area</button>
+    <div id="result"></div>
+    <p>b<sup>1</sup> is a and b<sup>2</sup> is b</p>
+    <img src="images/AreaofaTrapezoid.png" alt="Trapezoid" width="75%" height="auto"/>
   </body>
 </html>
